@@ -4,10 +4,13 @@
 @supports (font-variation-settings: initial) {
     @font-face {
         font-display: block;
-        font-family: "AdapterMonoVF";
-        font-weight: 100 900;
+        /* font-family: "AdapterMonoVF"; */
+        /* font-weight: 100 900; */
+        font-family: "Alegreya", "serif";
+        font-weight: 400 900;
         font-style: normal;
-        src: url("https://webfonts.rosettatype.com/dr/AdapterMonoPEVF-All.woff2") format("woff2");
+        /* src: url("https://webfonts.rosettatype.com/dr/AdapterMonoPEVF-All.woff2") format("woff2"); */
+        src: url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap") format("woff2");
     }
 }
 
