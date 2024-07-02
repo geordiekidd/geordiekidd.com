@@ -9,9 +9,14 @@
 }
 
 :root {
-    --link-color: rgb(120, 0, 13);
+    /* --link-color: rgb(120, 0, 13);
     --light-link-color: rgba(245, 235, 235, 1);
-    --border: rgba(245, 235, 235);
+    --border: rgba(245, 205, 235); */
+    /* Alternate colours */
+    --link-color: rgb(8, 57, 115);
+    --light-link-color: rgba(228, 237, 255, 1);
+    --border: rgba(210, 237, 255);
+    /* Background */
     --background: rgb(250, 249, 240);
 }
   
