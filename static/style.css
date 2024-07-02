@@ -1,0 +1,128 @@
+/* @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
+
+@supports (font-variation-settings: initial) {
+    @font-face {
+        font-display: block;
+        font-family: "AdapterMonoVF";
+        font-weight: 100 900;
+        font-style: normal;
+        src: url("https://webfonts.rosettatype.com/dr/AdapterMonoPEVF-All.woff2") format("woff2");
+    }
+  }
+
+  :root {
+    --link-color: rgba(120, 77, 206, 1);
+    --light-link-color: rgba(120, 77, 206, 0.065);
+    --border: rgba(247, 244, 70);
+    --background: rgb(255, 254, 244);
+  }
+  
+  /* General */
+  
+  
+  html {
+    background: var(--background);
+    border: 2px solid var(--border);
+  }
+  
+  body, li, p, h1, h2, h3, h4, h5 {
+    color: #111;
+    font-family: AdapterMonoVF, serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+  }
+  
+  section {
+    width: 1000px;
+    padding: 3em 10% 5em 10%;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 1.2em 0 0.5em;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin: 1.5em 0 0.5em;
+  }
+  
+  p {
+    margin: 1em 0;
+    max-width: 1000px;
+  }
+  
+  p.intro {
+    font-size: 32px;
+    font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
+    font-feature-settings: "ss07" on;
+    line-height: 144%;
+  }
+  
+  strong {
+    font-weight: 500;
+  }
+  
+  em {
+    font-style: normal;
+    font-variation-settings: "ital" 1, "slnt" -13, "wght" 400;
+    font-feature-settings: "ss07" on;
+  }
+  
+  ul {
+    padding-left: 0;
+  }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    background-color: var(--light-link-color);
+    border-radius: 5px;
+    padding: 0 0.2em;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 1150px) {
+    section {
+      width: 88%;
+      padding: 1em 7% 3em 5%;
+    }
+  
+    body, li, h1, h2, h3, h4, h5 {
+      font-size: 14px;
+    }
+  
+    p, p.intro {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    section {
+      width: 90%;
+      padding: 1em 5% 3em 5%;
+    }
+  
+    body, li, p, p.intro, h1, h2, h3, h4, h5 {
+      font-size: 14px;
+    }
+  
+    p.intro {
+      font-variation-settings: "ital" 1, "slnt" -11, "wght" 700;
+    }
+  }
