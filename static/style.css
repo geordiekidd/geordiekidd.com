@@ -1,119 +1,186 @@
 @supports (font-variation-settings: initial) {
-    @font-face {
-        font-display: block;
-        font-family: "AdapterMonoVF";
-        font-weight: 100 900;
-        font-style: normal;
-        src: url("https://webfonts.rosettatype.com/dr/AdapterMonoPEVF-All.woff2") format("woff2");
-    }
+  @font-face {
+    font-display: block;
+    font-family: "AdapterMonoVF";
+    font-weight: 100 900;
+    font-style: normal;
+    src: url("/resources/AdapterMono/AdapterMonoPEVF-All.woff2") format("woff2");
+  }
+  /* SkolarPE */
+  @font-face {
+    font-display: block;
+    font-family: "SkolarPE";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/resources/Skolar/SkolarPE-Regular.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarPE";
+    font-style: italic;
+    font-weight: normal;
+    src: url("/resources/Skolar/SkolarPE-Italic.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarPE";
+    font-style: bold;
+    font-weight: bold;
+    src: url("/resources/Skolar/SkolarPE-Bold.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarPE";
+    font-style: italic;
+    font-weight: bold;
+    src: url("/resources/Skolar/SkolarPE-BoldItalic.ttf") format(truetype);
+  }
+  /* SkolarSansPE */
+  @font-face {
+    font-display: block;
+    font-family: "SkolarSansPE";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/resources/SkolarSans/SkolarSansPE-Regular.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarSansPE";
+    font-style: italic;
+    font-weight: normal;
+    src: url("/resources/SkolarSans/SkolarSansPE-Italic.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarSansPE";
+    font-style: bold;
+    font-weight: bold;
+    src: url("/resources/SkolarSans/SkolarSansPE-Bold.ttf") format(truetype);
+  }
+  @font-face {
+    font-display: block;
+    font-family: "SkolarSansPE";
+    font-style: italic;
+    font-weight: bold;
+    src: url("/resources/SkolarSans/SkolarSansPE-BoldItalic.ttf") format(truetype);
+  }
 }
 
 :root {
-    --link-color: rgb(120, 0, 13);
+    /* --link-color: rgb(120, 0, 13);
     --light-link-color: rgba(245, 235, 235, 1);
-    --border: rgba(245, 205, 235);
+    --border: rgba(245, 205, 235); */
     /* Alternate colours */
-    /* --link-color: rgb(8, 57, 115);
+    --link-color: rgb(8, 57, 115);
     --light-link-color: rgba(228, 237, 255, 0.65);
-    --border: rgba(210, 237, 255); */
+    --border: rgb(255, 242, 102);
     /* Background */
     --background: rgb(250, 249, 245);
+  --bs-font-sans-serif: "Alegreya";
 }
   
 /* General */
     
 html {
     background: var(--background);
-    /* border: 2px solid var(--border); */
+    border: 2px solid var(--border);
 }
   
 body, li, p, h1, h2, h3, h4, h5 {
     color: #111;
-    font-family: AdapterMonoVF, serif;
-    font-weight: 400;
-    font-size: 14px;
+    font-family: SkolarSansPE, serif;
+    /* font-weight: 400; */
+    font-size: 20px;
     line-height: 150%;
 }
   
 section {
-    width: 1000px;
-    padding: 5em 10% 5em 10%;
+  width: 1000px;
+  padding: 5em 10% 5em 10%;
 }
   
-h1, h2, h3, h4 {
-    font-weight: 600;
+h2, h3, h4 {
+  font-family: SkolarSansPE;
+  font-weight: bold;
 }
   
 h1 {
-    font-size: 2em;
-    margin: 1.2em 0 0.5em;
+  font-family: AdapterMonoVF;
+  font-variation-settings: /* "ital" 1, "slnt" -10, */ "wght" 600;
+  font-size: 2em;
+  margin: 1.2em 0 0.5em;
 }
   
 h2 {
-    font-size: 1.2em;
-    margin: 1.5em 0 0.5em;
+  font-size: 1.2em;
+  margin: 1.5em 0 0.5em;
 }
   
 p {
-    margin: 1em 0;
-    max-width: 1000px;
+  margin: 1em 0;
+  max-width: 1000px;
 }
   
-p.intro {
-    font-size: 32px;
-    font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
-    font-feature-settings: "ss07" on;
-    line-height: 144%;
+p.intro { 
+  font-family: SkolarPE;
+  font-size: 32px;
+  /* font-style: italic; */
+  font-variation-settings: /* "ital" 1, "slnt" -10, */ "wght" 600;
+  font-feature-settings: "ss07" on;
+  line-height: 144%;
 }
   
 strong {
-    font-weight: 500;
+  font-weight: 500;
 }
   
 em {
-    font-style: normal;
-    font-variation-settings: "ital" 1, "slnt" -13, "wght" 400;
-    font-feature-settings: "ss07" on;
+  font-style: italic;
+  /* font-family: AdapterMonoVF;
+  font-variation-settings: "ital" 1, "slnt" -13, "wght" 400;
+  font-feature-settings: "ss07" on; */
 }
   
 ul {
-    padding-left: 0;
+  padding-left: 0;
 }
   
 a {
-    color: var(--link-color);
-    text-decoration: none;
-    background-color: var(--light-link-color);
-    border-radius: 5px;
-    padding: 0.05em 0.2em;
-    line-height: 100%; /* keeps the line height the same */
-    transition: all 300ms; /* transition time */
+  font-family: AdapterMonoVF;
+  /* font-size: 90%; */
+  color: var(--link-color);
+  text-decoration: none;
+  background-color: var(--light-link-color);
+  border-radius: 5px;
+  padding: 0.05em 0.2em;
+  line-height: 100%; /* keeps the line height the same */
+  transition: all 300ms;
 }
 
 a:hover {
-    text-decoration: underline;
-    /* font-size: 115%; */
+  text-decoration: underline;
+  /* font-size: 115%; */
 }
   
 .hide {
-    display: none;
+  display: none;
 }
   
 /* Responsive */
   
 @media (max-width: 1150px) {
-    section {
-      width: 88%;
-      padding: 1em 7% 3em 5%;
-    }
-  
-    body, li, h1, h2, h3, h4, h5 {
-      font-size: 14px;
-    }
-  
-    p, p.intro {
-      font-size: 24px;
-    }
+  section {
+    width: 88%;
+    padding: 1em 7% 3em 5%;
+  }
+
+  body, li, h1, h2, h3, h4, h5 {
+    font-size: 20px;
+  }
+
+  p, p.intro {
+    font-size: 20px;
+  }
 }
   
 @media (max-width: 800px) {
@@ -126,9 +193,9 @@ a:hover {
       font-size: 14px;
     }
   
-    p.intro {
+    /* p.intro {
       font-variation-settings: "ital" 1, "slnt" -11, "wght" 700;
-    }
+    } */
 }
 
 /* Tabs */
@@ -138,7 +205,7 @@ a:hover {
     background-color: var(--light-link-color);
     font-family: AdapterMonoVF, serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1em;
     border: none;
     outline: none;
     padding: 0px 0px;
@@ -146,20 +213,21 @@ a:hover {
     border-radius: 5px;
     padding: 0.05em 0.2em;
     cursor: pointer;
-    line-height: 1;
+    line-height: 100%;
+    margin-right: 7px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
     text-decoration: underline;
-    /* font-size: 144%; */
+    /* font-size: 115%; */
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
     font-family: AdapterMonoVF, serif;
     font-style: normal;
-    font-weight: 650;
+    font-weight: 600;
     background-color: var(--light-link-color);
 }
 
@@ -167,3 +235,5 @@ a:hover {
 .tabcontent {
     display: none;
 }
+
+/* Button formatting */
