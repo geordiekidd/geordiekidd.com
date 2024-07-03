@@ -82,8 +82,8 @@
 /* General */
     
 html {
-    background: var(--background);
-    border: 2px solid var(--border);
+  background: var(--background);
+  border: 2px solid var(--border);
 }
   
 body, li, p, h1, h2, h3, h4, h5 {
@@ -190,7 +190,7 @@ a:hover {
     }
   
     body, li, p, p.intro, h1, h2, h3, h4, h5 {
-      font-size: 20px;
+      font-size: 14px;
     }
   
     /* p.intro {
@@ -201,39 +201,40 @@ a:hover {
 /* Tabs */
 /* Style the buttons that are used to open the tab content */
 .tab button {
-    color: var(--link-color);
-    background-color: var(--light-link-color);
-    font-family: AdapterMonoVF, serif;
-    font-weight: 400;
-    font-size: 1em;
-    border: none;
-    outline: none;
-    padding: 0px 0px;
-    transition: 400ms;
-    border-radius: 5px;
-    padding: 0.05em 0.2em;
-    cursor: pointer;
-    line-height: 100%;
-    margin-right: 7px;
+  color: var(--link-color);
+  background-color: var(--light-link-color);
+  font-family: AdapterMonoVF, serif;
+  font-weight: 400;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding: 0px 0px;
+  transition: 400ms;
+  border-radius: 5px;
+  padding: 0.05em 0.2em;
+  cursor: pointer;
+  line-height: 100%;
+  margin-left: -0.25em;
+  margin-right: 7px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    text-decoration: underline;
-    /* font-size: 115%; */
+  text-decoration: underline;
+  /* font-size: 115%; */
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    font-family: AdapterMonoVF, serif;
-    font-style: normal;
-    font-weight: 600;
-    background-color: var(--light-link-color);
+  font-family: AdapterMonoVF, serif;
+  font-style: normal;
+  font-weight: 600;
+  background-color: var(--light-link-color);
 }
 
 /* Style the tab content */
 .tabcontent {
-    display: none;
+  display: none;
 }
 
 /* Button formatting */

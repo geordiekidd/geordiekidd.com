@@ -16,89 +16,89 @@
 </head>
 
 <body>
-    <section>
-        <div class="tab">
-            <button class="tablinks" data-place="Home">Home</button>
-            <button class="tablinks" data-place="Writ">Writing</button>
-            <button class="tablinks" data-place="Pres">Presentations</button>
-            <button class="tablinks" data-place="Blog">Blog posts</button>
-            <button class="tablinks" data-place="About">About</button>
-        </div>
-        <!-- code from: https://stackoverflow.com/a/66497946 -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
+  <section>
+    <div class="tab">
+      <button class="tablinks" data-place="Home">Home</Home></button>
+      <button class="tablinks" data-place="Writ">Writing</button>
+      <button class="tablinks" data-place="Pres">Presentations</button>
+      <button class="tablinks" data-place="Blog">Blog posts</button>
+      <button class="tablinks" data-place="About">About</button>
+    </div>
+    <!-- code from: https://stackoverflow.com/a/66497946 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
 
-        $(document).ready(function(){
-            let switching = true;
-            const defaultOpen = "Home";
+    $(document).ready(function(){
+      let switching = true;
+      const defaultOpen = "Home";
 
-            $("button[data-place=" + defaultOpen + "]").addClass("active");
-            $("div[data-place=" + defaultOpen + "]").fadeIn(250, function(){
-                $(this).addClass("active");
-                switching = false;
-            });
+      $("button[data-place=" + defaultOpen + "]").addClass("active");
+      $("div[data-place=" + defaultOpen + "]").fadeIn(250, function(){
+        $(this).addClass("active");
+        switching = false;
+      });
 
-            $(".tablinks").click(function(){
-                const switchToAttr = $(this).attr("data-place");
-                const switchTo = $("div[data-place=" + switchToAttr + "]");
-                const prevDiv = $("div.active");
+      $(".tablinks").click(function(){
+        const switchToAttr = $(this).attr("data-place");
+        const switchTo = $("div[data-place=" + switchToAttr + "]");
+        const prevDiv = $("div.active");
 
-                if(!switching && switchToAttr != prevDiv.attr("data-place")){
-                    switching = true;
+        if(!switching && switchToAttr != prevDiv.attr("data-place")){
+          switching = true;
 
-                    $("button.active").removeClass("active");
-                    prevDiv.removeClass("active");
+          $("button.active").removeClass("active");
+          prevDiv.removeClass("active");
 
-                    $(this).addClass("active");
-                    switchTo.addClass("active");
+          $(this).addClass("active");
+          switchTo.addClass("active");
 
-                    prevDiv.fadeOut(250, function(){
-                        switchTo.fadeIn(250);
-                        switching = false;
-                    });
+          prevDiv.fadeOut(250, function(){
+            switchTo.fadeIn(250);
+            switching = false;
+          });
 
-                }
+        }
 
-            });
+      });
 
-        });
-        </script>
+    });
+    </script>
 
-        <div class="tabcontent" data-place="Home">
-            <p class="intro">I&rsquo;m Geordie, and this is my <em>personal website</em>. I&rsquo;m an Honours student in linguistics studying at <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">The University of Melbourne</a>, and I&rsquo;m particularly interested in the Indigenous languages of northern Australia. This website is a work in progress; I aim to update it with presentation materials, papers, and blog posts.</p>    
-            
-            <h2>Contact</h2>
-            <p>
-                Email: <a href="mailto:geordiekidd@gmail.com">geordiekidd@gmail.com</a><br>
-                Twttr: <a href="https://www.x.com/geordiepkidd">@geordiepkidd</a><br>
-                ORCID: <a href="https://orcid.org/0009-0004-7936-1833">0009-0004-7936-1833</a>
-            </p>
-        </div>
+    <div class="tabcontent" data-place="Home">
+      <p class="intro">I&rsquo;m Geordie, and this is my <em>personal website</em>. I&rsquo;m an Honours student in linguistics studying at <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">The University of Melbourne</a>, and I&rsquo;m particularly interested in the Indigenous languages of northern Australia. This website is a work in progress; I aim to update it with presentation materials, papers, and blog posts.</p>    
+      
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:geordiekidd@gmail.com">geordiekidd@gmail.com</a><br>
+        Twttr: <a href="https://www.x.com/geordiepkidd">@geordiepkidd</a><br>
+        ORCID: <a href="https://orcid.org/0009-0004-7936-1833">0009-0004-7936-1833</a>
+      </p>
+    </div>
 
-        <div class="tabcontent" data-place="Writ">
-            <h1>Writing</h1>
-            <p>
-                On this page are my recent writings. Some have supplied PDFs, and some are available only on request. The work on this page mostly comprises university essays and other related writings. Occasionally, I might throw in a short Philosophy paper.
-            </p>
-        </div>
+    <div class="tabcontent" data-place="Writ">
+      <h1>Writing</h1>
+      <p>
+        On this page are my recent writings. Some have supplied PDFs, and some are available only on request. The work on this page mostly comprises university essays and other related writings. Occasionally, I might throw in a short Philosophy paper.
+      </p>
+    </div>
 
-        <div class="tabcontent" data-place="Pres">
-            <h1>Presentations</h1>
-            <p>
-                Here are slides and synopses of some of my presentations.
-            </p>
-        </div>
+    <div class="tabcontent" data-place="Pres">
+      <h1>Presentations</h1>
+      <p>
+        Here are slides and synopses of some of my presentations.
+      </p>
+    </div>
 
-        <div class="tabcontent" data-place="Blog">
-            <h1>Blog posts</h1>
-            <p>
-                Blog!
-            </p>
-        </div>
-        
-        <div class="tabcontent" data-place="About">
-            <h1>About me / this website</h1>
-        </div>
-    </section>
+    <div class="tabcontent" data-place="Blog">
+      <h1>Blog posts</h1>
+      <p>
+        Blog!
+      </p>
+    </div>
+      
+    <div class="tabcontent" data-place="About">
+      <h1>About me / this website</h1>
+    </div>
+  </section>
 </body>
 </html>
