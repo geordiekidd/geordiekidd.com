@@ -24,49 +24,16 @@
       <button class="tablinks" data-place="Blog">Blog posts</button>
       <button class="tablinks" data-place="About">About</button>
     </div>
-    <!-- code from: https://stackoverflow.com/a/66497946 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-
-    $(document).ready(function(){
-      let switching = true;
-      const defaultOpen = "Home";
-
-      $("button[data-place=" + defaultOpen + "]").addClass("active");
-      $("div[data-place=" + defaultOpen + "]").fadeIn(250, function(){
-        $(this).addClass("active");
-        switching = false;
-      });
-
-      $(".tablinks").click(function(){
-        const switchToAttr = $(this).attr("data-place");
-        const switchTo = $("div[data-place=" + switchToAttr + "]");
-        const prevDiv = $("div.active");
-
-        if(!switching && switchToAttr != prevDiv.attr("data-place")){
-          switching = true;
-
-          $("button.active").removeClass("active");
-          prevDiv.removeClass("active");
-
-          $(this).addClass("active");
-          switchTo.addClass("active");
-
-          prevDiv.fadeOut(250, function(){
-            switchTo.fadeIn(250);
-            switching = false;
-          });
-
-        }
-
-      });
-
-    });
-    </script>
-
+    <script src="/js/tabactive.js"></script>
     <div class="tabcontent" data-place="Home">
+      <h1 class="subhead">
+        <div class="cyclic">Hello!</div>
+        <script src="/js/cyclic.js"></script>
+      </h1>
       <p class="intro">
-        <span id="cycle"></span> I&rsquo;m Geordie, and this is my personal website. I&rsquo;m an Honours student in linguistics studying at <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">The University of Melbourne</a>, and I&rsquo;m particularly interested in the Indigenous languages of northern Australia. This website is a work in progress; I aim to update it with presentation materials, papers, and blog posts.</p>    
+        <!-- <span id="cycle"></span><br> -->
+        &lt;&lt; I&rsquo;m Geordie, and this is my personal website. I&rsquo;m an Honours student in linguistics studying at <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">The University of Melbourne</a>, and I&rsquo;m particularly interested in the Indigenous languages of northern Australia. This website is a work in progress; I aim to update it with presentation materials, papers, and blog posts. &gt;&gt;</p>    
       <h2>Contact</h2>
       <p>
         Email: <a href="mailto:geordiekidd@gmail.com">geordiekidd@gmail.com</a><br>

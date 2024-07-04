@@ -185,6 +185,9 @@ a:hover {
   section {
     width: 90%;
     padding: 1em 5% 3em 5%;
+    .tab button.active {
+      font-size: 1em;
+    }
   }
 
   body, li, p, p.intro, h1, h2, h3, h4, h5 {
@@ -192,7 +195,7 @@ a:hover {
   }
 
   p.intro {
-    font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
+    font-variation-settings: "ital" 1, "slnt" -10, "wght" 700;
   }
 }
 
@@ -241,10 +244,44 @@ a:hover {
 
 
 /* Cyclic HELLO messsage */
+.subhead {
+  display: flex;
+}
+.cyclic {
+  display: inline-grid;
+  font-size: 1.5em;
+  background: var(--border);
+  padding: 0 7px;
+  border-radius: 10px;
+  margin-left: -7px;
+  line-height: 110%;
+  font-feature-settings: "ss07" on;
+}
+
+/* .text-container {
+  display: flex;
+}
+
+.text {
+  display: inline-grid;
+  font-size: 1.5em; 
+  background: var(--border);
+  padding: 0 7px;
+  border-radius: 10px;
+  margin-left: -7px;
+  line-height: 110%;
+  font-feature-settings: "ss07" on;
+}
+.text::after {
+  display: block;
+  content: "Hello!";
+  animation: cycle 30s infinite;
+}
+
+
 #cycle:after {
   font-family: AdapterMonoVF;
   font-size: 1em;
-  font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
   animation-name: cycle;
   animation-duration: 30s;
   animation-iteration-count: infinite;
@@ -255,10 +292,12 @@ a:hover {
   margin-left: -7px;
   line-height: 110%;
   background: var(--border);
-  width: var(--width);
+
   transition-timing-function: ease;
   transition: all 300ms;
 }
+*/
+
 @keyframes cycle {
   0% {
     content: "Hello!"; /* English */ 
