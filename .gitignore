@@ -3,3 +3,4 @@ test/
 readme.md
 _site/
 _layouts/
+.DS_Store
