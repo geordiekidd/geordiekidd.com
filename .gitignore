@@ -1,6 +1,5 @@
 Gemfile.lock
-test/
+test
 readme.md
-_site/
-_layouts/
+_site
 .DS_Store
