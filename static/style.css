@@ -67,16 +67,15 @@
 }
 
 :root {
-    /* --link-color: rgb(120, 0, 13);
-    --light-link-color: rgba(245, 235, 235, 1);
-    --border: rgba(245, 205, 235); */
-    /* Alternate colours */
-    --link-color: rgb(8, 57, 115);
-    --light-link-color: rgba(228, 237, 255, 0.65);
-    --border: rgb(255, 242, 102);
-    /* Background */
-    --background: rgb(250, 249, 245);
-  --bs-font-sans-serif: "Alegreya";
+  /* --link-color: rgb(120, 0, 13);
+  --light-link-color: rgba(245, 235, 235, 1);
+  --border: rgba(245, 205, 235); */
+  /* Alternate colours */
+  --link-color: rgb(8, 57, 115);
+  --light-link-color: rgba(228, 237, 255, 0.65);
+  --border: rgb(255, 242, 102);
+  /* Background */
+  --background: rgb(250, 249, 245);
 }
   
 /* General */
@@ -87,26 +86,26 @@ html {
 }
   
 body, li, p, h1, h2, h3, h4, h5 {
-    color: #111;
-    font-family: SkolarSansPE, serif;
-    /* font-weight: 400; */
-    font-size: 20px;
-    line-height: 150%;
+  color: #111;
+  font-family: AdapterMonoVF, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
   
 section {
   width: 1000px;
   padding: 5em 10% 5em 10%;
 }
-  
-h2, h3, h4 {
-  font-family: SkolarSansPE;
+
+h1, h2, h3, h4 {
+  font-family: AdapterMonoVF;
   font-weight: bold;
 }
   
 h1 {
   font-family: AdapterMonoVF;
-  font-variation-settings: /* "ital" 1, "slnt" -10, */ "wght" 600;
+  font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
   font-size: 2em;
   margin: 1.2em 0 0.5em;
 }
@@ -122,10 +121,10 @@ p {
 }
   
 p.intro { 
-  font-family: SkolarPE;
+  font-family: AdapterMonoVF;
   font-size: 32px;
   /* font-style: italic; */
-  font-variation-settings: /* "ital" 1, "slnt" -10, */ "wght" 600;
+  font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
   font-feature-settings: "ss07" on;
   line-height: 144%;
 }
@@ -135,10 +134,10 @@ strong {
 }
   
 em {
-  font-style: italic;
-  /* font-family: AdapterMonoVF;
+  /* font-style: italic; */
+  font-family: AdapterMonoVF;
   font-variation-settings: "ital" 1, "slnt" -13, "wght" 400;
-  font-feature-settings: "ss07" on; */
+  font-feature-settings: "ss07" on;
 }
   
 ul {
@@ -154,7 +153,6 @@ a {
   border-radius: 5px;
   padding: 0.05em 0.2em;
   line-height: 100%; /* keeps the line height the same */
-  transition: all 300ms;
 }
 
 a:hover {
@@ -184,21 +182,22 @@ a:hover {
 }
   
 @media (max-width: 800px) {
-    section {
-      width: 90%;
-      padding: 1em 5% 3em 5%;
-    }
-  
-    body, li, p, p.intro, h1, h2, h3, h4, h5 {
-      font-size: 14px;
-    }
-  
-    /* p.intro {
-      font-variation-settings: "ital" 1, "slnt" -11, "wght" 700;
-    } */
+  section {
+    width: 90%;
+    padding: 1em 5% 3em 5%;
+  }
+
+  body, li, p, p.intro, h1, h2, h3, h4, h5 {
+    font-size: 14px;
+  }
+
+  p.intro {
+    font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
+  }
 }
 
 /* Tabs */
+
 /* Style the buttons that are used to open the tab content */
 .tab button {
   color: var(--link-color);
@@ -213,9 +212,10 @@ a:hover {
   border-radius: 5px;
   padding: 0.05em 0.2em;
   cursor: pointer;
-  line-height: 100%;
-  margin-left: -0.25em;
+  line-height: 1em;
+  margin-left: -0.21em;
   margin-right: 7px;
+  transition: all 300ms;
 }
 
 /* Change background color of buttons on hover */
@@ -229,6 +229,7 @@ a:hover {
   font-family: AdapterMonoVF, serif;
   font-style: normal;
   font-weight: 600;
+  font-size: 1.2em;
   background-color: var(--light-link-color);
 }
 
@@ -237,4 +238,89 @@ a:hover {
   display: none;
 }
 
-/* Button formatting */
+
+
+/* Cyclic HELLO messsage */
+#cycle:after {
+  font-family: AdapterMonoVF;
+  font-size: 1em;
+  font-variation-settings: "ital" 1, "slnt" -10, "wght" 600;
+  animation-name: cycle;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  content: "";
+  display: inline-grid;
+  padding: 0 7px;
+  border-radius: 10px;
+  margin-left: -7px;
+  line-height: 110%;
+  background: var(--border);
+  width: 7em;
+  transition-timing-function: ease;
+  transition: all 300ms;
+}
+@keyframes cycle {
+  0% {
+    content: "Hello!"; /* English */ 
+  }
+  5% {
+    content: "Hello!"; /* English */ 
+  }
+  10% {
+    content: "Guten Tag!"; /* German */
+  }
+  15% {
+    content: "Olá!"; /* Portuguese */
+  }
+  20% {
+    content: "Xin chào!"; /* Vietnamese */
+  }
+  25% {
+    content: "!مرحبًا"; /* Arabic */
+  }
+  30% {
+    content: "Kaixo!"; /* Basque */
+  }
+  35% {
+    content: "Cześć!"; /* Polish */
+  }
+  40% {
+    content: "নমস্কার!"; /* Bengali */
+  }
+  45% {
+    content: "ሰላም!"; /* Amharic */
+  }
+  50% {
+    content: "Zdravo!"; /* Serbian */
+  }
+  55% {
+    content: "Sannu!"; /* Hausa */
+  }
+  60% {
+    content: "こんにちは!"; /* Japanese */
+  }
+  65% {
+    content: "Ndewo!"; /* Igbo */
+  }
+  70% {
+    content: "Kia ora!"; /* Maori */
+  }
+  75% {
+    content: "Muraho!"; /* Kinyarwanda */
+  }
+  80% {
+    content: "Вітаю!"; /* Ukrainian */
+  }
+  85% {
+    content: "Hei!"; /* Finnish */
+  }
+  90% {
+    content: "Γειά σου!"; /* Greek */
+  }
+  95% {
+    content: "Manao ahoana!"; /* Malagasy */
+  }
+  100% {
+    content: "Halo!"; /* Indonesian */
+  }
+}
