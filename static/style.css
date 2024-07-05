@@ -89,7 +89,7 @@ body, li, p, h1, h2, h3, h4, h5 {
   color: #111;
   font-family: AdapterMonoVF, serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
 }
   
@@ -128,7 +128,7 @@ p.intro {
 strong {
   font-weight: 500;
 }
-  
+
 em {
   font-style: normal;
   font-variation-settings: "ital" 1, "slnt" -13, "wght" 400;
@@ -157,9 +157,6 @@ a:hover {
   display: none;
 }
 
-.gap {
-  margin-top: 2.5em;
-}
 
 
 /* Tabs */
@@ -170,7 +167,7 @@ a:hover {
   background-color: var(--light-link-color);
   font-family: AdapterMonoVF, serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1em;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -197,6 +194,7 @@ a:hover {
 /* Style the tab content */
 .tabcontent {
   display: none;
+  margin: 2em 0% 0em 0%;
 }
   
 
@@ -220,26 +218,30 @@ a:hover {
 
 /* Responsive */
   
-@media (max-width: 1150px) {
+@media screen and (max-width: 1150px) {
   section {
     width: 88%;
     padding: 1em 7% 3em 5%;
   }
 
   body, li, h1, h2, h3, h4, h5 {
-    font-size: 14px;
+    font-size: 20px;
   }
 
-  p, p.intro {
-    font-size: 24px;
+  p {
+    font-size: 20px;
+  }
+  
+  p.intro {
+    font-size: 20px;
   }
 
   .tab button {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .tab button.active {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .cyclic {
@@ -247,7 +249,7 @@ a:hover {
   }
 }
   
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   section {
     width: 90%;
     padding: 1em 5% 3em 5%;

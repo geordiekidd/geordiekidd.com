@@ -29,4 +29,4 @@ setInterval(() => {
   if (displayIdx >= subHeads.length) {
     displayIdx = 0;
   }
-}, 1800);
+}, 1500);
