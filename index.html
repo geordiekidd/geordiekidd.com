@@ -2,9 +2,10 @@
 <html>
     
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta charset="utf-8"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; text/html">
 
     <title>Geordie Kidd</title>
   
@@ -24,7 +25,7 @@
 <body>
   <section>
     <div class="tab">
-      <button class="tablinks" data-place="Home">Home</Home></button>
+      <button class="tablinks" data-place="Home">Home</button>
       <button class="tablinks" data-place="Writ">Writing</button>
       <button class="tablinks" data-place="Pres">Presentations</button>
       <button class="tablinks" data-place="Blog">Blog</button>
@@ -34,12 +35,13 @@
     <script src="/js/tabactive.js"></script>
     <div class="tabcontent" data-place="Home">
       <h1 class="subhead">
-        <div class="cyclic">Hello!</div>
+        <div class="cyclic"><span id="feature-text"></span>Hello!</div>
+        <!-- <div class="cyclic">Hello!</div> -->
         <script src="/js/cyclic.js"></script>
       </h1>
       <p class="intro">
         <!-- <span id="cycle"></span><br> -->
-        I&rsquo;m Geordie, and this is my personal website. I&rsquo;m an Honours student in linguistics studying at <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">The University of Melbourne</a>, and I&rsquo;m particularly interested in the morphologies and word structures of Indigenous languages of northern Australia. This website is intended to serve as a public archive of my work, and as a personal blog. &lt;GK&gt;
+        I&rsquo;m Geordie, and this is my personal website. I&rsquo;m an undergraduate linguistics student at the <a href="https://arts.unimelb.edu.au/school-of-languages-and-linguistics">University of Melbourne</a>, and I&rsquo;m particularly interested in the morphology and word structure of the Indigenous languages of northern Australia. This website is intended to serve as a personal blog and an archive of my work. &lt;GK&gt;
       </p>    
       <h2>Contact</h2>
       <p>
@@ -47,34 +49,51 @@
         Twttr: <a href="https://www.x.com/geordiepkidd">@geordiepkidd</a><br>
         ORCID: <a href="https://orcid.org/0009-0004-7936-1833">0009-0004-7936-1833</a>
       </p>
+      <!-- <h3>Disclaimer</h3>
+      <p>
+        The views presented on this site are entirely my own, and are <em>not</em> endorsed by nor representative of the University of Melbourne.
+      </p> -->
     </div>
 
     <div class="tabcontent" data-place="Writ">
       <p>
-        On this page are my recent writings. Some have supplied PDFs, and some are available only on request. The work on this page mostly comprises university essays and other related writings. Occasionally, I might throw in a short Philosophy paper.
+        <!-- On this page are my recent writings. Some have supplied PDFs, and some are available only on request. The work on this page mostly comprises university essays and other related writings. Occasionally, I might throw in a short Philosophy paper. -->
+        <ul>
+          <li>Kidd, G. (2020). <a href="/files/writ/Kidd2020CloseToTheEdge.pdf">Expressions of identity by South Sudanese hip hop artists in Melbourne, Australia.</a> <em>Australasian Review of African Studies</em>, <em>41</em>(2), 147&ndash;163.</li>
+        </ul>
       </p>
     </div>
 
     <div class="tabcontent" data-place="Pres">
       <p>
-        Here are slides and synopses of some of my presentations.
+        <!-- Here are slides and synopses of some of my presentations. -->
         <ul>
-          <li>16 Jan 2024, <a href="files/pres/wrr-pres.pdf"><em>Polarity and gradience in Wardaman verbal predicates</em></a>. Talk given as an ANU Summer Research Scholar.</li>
+          <li>16 Jan 2024, <a href="files/pres/wrr-pres.pdf"><em>Polarity and gradience in Wardaman verbal predicates</em></a>. ANU Summer Research Scholarship, Canberra.</li>
           <li>30 Nov 2023, <a href="/files/pres/model-redup-verb-sem.pdf"><em>Modelling reduplicative verb semantics using Lexical-Conceptual Structure</em></a>. Australian Linguistics Society Conference, Sydney.</li>
         </ul>
       </p>
     </div>
 
     <div class="tabcontent" data-place="Blog">
+      <!-- <h2>Thirty-first of July, Two Thousand and Twenty Four</h2>
       <p>
-        Blog!
-      </p>
+        I'm in the middle of writing my Honours thesis right now. I'm looking for something interesting to say
+      </p> -->
     </div>
       
     <div class="tabcontent" data-place="Xtra">
       <p>
-        How do you say hello in <em>your</em> language?
+        Favourite singer: <em>Bj&ouml;rk</em>.<br>
+        <!-- Favourite movie: <em>Wings of Desire (1987)</em>. -->
       </p>
+      <!-- <p>
+        <div class="col-form">
+          <form action="submit.php" method="post">
+            <input type="text" id="lang" name="lang" placeholder="e.g., Hola : Spanish" required>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </p> -->
     </div>
   </section>
 </body>
